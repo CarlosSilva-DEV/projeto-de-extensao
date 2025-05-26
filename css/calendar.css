@@ -1,5 +1,5 @@
 header {
-    background-color: #FF4B2B;
+    background-color: #232323;
     color: white;
     padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -40,6 +40,7 @@ nav {
     padding: 2rem;
     max-width: 1200px;
     margin: 2rem auto;
+    overflow: scroll;
 }
 
 .calendar-container {
@@ -67,7 +68,7 @@ nav {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #FF4B2B;
+    color: #232323;
     padding: 0 1rem;
 }
 

@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     function loadAppointmentHistory() {
-        const userAppointments = agendamentos
+        const userAppointments = appointments
             .filter(app => app.userId === currentUser.id)
             .sort((a, b) => new Date(b.date) - new Date(a.date));
         
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <span class="appointment-status ${app.status}">${app.status === 'confirmed' ? 'Confirmado' : 'Cancelado'}</span>
                 </div>
                 ${app.status === 'confirmed' ? 
-                    <button class="cancel-appointment" data-id="${app.id}">Cancelar</button> : ''}
+                    `<button class="cancel-appointment" data-id="${app.id}">Cancelar</button>` : ''}
             `;
             
             historyList.appendChild(appElement);
@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function cancelAppointment(appointmentId) {
         if (!confirm('Tem certeza que deseja cancelar este agendamento?')) return;
         
-        const appointmentIndex = agendamentos.findIndex(app => app.id === appointmentId);
+        const appointmentIndex = appointments.findIndex(app => app.id === appointmentId);
         if (appointmentIndex !== -1) {
             appointments[appointmentIndex].status = 'cancelled';
-            localStorage.setItem('barbearia_appointments', JSON.stringify(agendamentos));
+            localStorage.setItem('barbearia_appointments', JSON.stringify(appointments));
             loadAppointmentHistory();
         }
     }

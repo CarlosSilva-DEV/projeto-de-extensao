@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGENDAMENTOS | BARBEARIA FB CORT'S</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">BARBEARIA FB CORT'S</div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Agendamentos</a></li>
+                <li><a href="profile.html" id="profileLink">Perfil</a></li>
+                <li><a href="#"id="logoutLink">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <h2>Agende seu horário</h2>
+                <div class="month-navigation">
+                    <button id="prevMonth">&lt;</button>
+                    <h3 id="currentMonth">Janeiro 2023</h3>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+            </div>
+            
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- O calendário será gerado dinamicamente via JavaScript -->
+            </div>
+        </div>
+
+        <div class="time-slots-container" id="timeSlotsContainer">
+            <h3>Horários disponíveis para <span id="selectedDate"></span></h3>
+            <div class="time-slots" id="timeSlots">
+                <!-- Os horários serão gerados dinamicamente -->
+            </div>
+            <button id="confirmAppointment" disabled>Confirmar Agendamento</button>
+        </div>
+    </main>
+
+    <script src="js/calendar.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

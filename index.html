@@ -1,48 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia FB Cort's</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>BARBEARIA FB CORT'S</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="home-page-header">
-        <div class="home-page-header-text">
-            <!-- inserir logo da barbearia -->
-            <h1>BARBEARIA FB CORT'S</h1><br>
-            <p>A melhor barbearia da região da Vila São Pedro, São Bernardo do Campo.</p>
+        <div class="home-page-header-content">
+            <img src="assets/fbcorts-logo.png" alt="Logo">
+            <h1>BARBEARIA FB CORT'S</h1>
         </div>
     </header>
-    <div class="home-page-content-container">
-        <div class="home-page-content">
-            <div class="home-page-panel-overlay-left">
-                <h1>Já tem uma conta?</h1>
-                <p>Faça login e agende seu horário</p>
-                <button class="home-page-login-button" id="signIn">
-                    <a href="login.html">
-                        <span class="fa fa-sign-in"></span>
-                        <span>Entrar</span>
-                    </a>
-                </button>
-            </div>
-            <div class="home-page-panel-overlay-right">
-                <h1>Novo por aqui?</h1>
-                <p>Cadastre-se para agendar seu horário</p>
-                <button class="home-page-sign-up-button" id="signUp">
-                    <a href="signup.html">
-                        <span class="fa fa-user"></span>
-                        <span>Criar Conta</span>
-                    </a>
-                </button>
-            </div>
-            <div class="home-page-footer">
-                <footer class="home-page-footer">
-                     <p>Endereço: Rua Floral, 152 - Vila São Pedro, São Bernardo do Campo, SP. CEP: 09780-670</p>
-                     <p>Horário de Funcionamento: 09:30 às 20:00.</p>
-                </footer>
+    <div class="container" id="container">
+        <div class="form-container sign-in-container">
+            <form id="loginForm">
+                <h1>Faça seu login</h1>
+                <input type="email" id="loginEmail" placeholder="E-mail" required />
+                <input type="password" id="loginPassword" placeholder="Senha" required />
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        <div class="form-container sign-up-container">
+            <form id="registerForm">
+                <h1>Crie sua conta</h1>
+                <input type="text" id="registerName" placeholder="Nome Completo" required />
+                <input type="email" id="registerEmail" placeholder="E-mail" required />
+                <input type="password" id="registerPassword" placeholder="Senha" required />
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Já tem uma conta?</h1>
+                    <p>Faça login e agende seu horário</p>
+                    <button class="ghost" id="signIn">Entrar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Novo por aqui?</h1>
+                    <p>Cadastre-se para agendar seu horário</p>
+                    <button class="ghost" id="signUp">Cadastrar</button>
+                </div>
             </div>
         </div>
     </div>

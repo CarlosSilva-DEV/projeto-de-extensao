@@ -10,8 +10,8 @@ const logoutLink = document.getElementById('logoutLink');
 
 // Verificar se o usuário está logado ao carregar a página
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.location.pathname.includes('agendamentos.html') || 
-        window.location.pathname.includes('perfil.html')) {
+    if (window.location.pathname.includes('appointments.html') || 
+        window.location.pathname.includes('profile.html')) {
         if (!currentUser) {
             window.location.href = 'index.html';
         }
@@ -31,7 +31,7 @@ if (loginForm) {
         if (user) {
             currentUser = user;
             sessionStorage.setItem('current_user', JSON.stringify(user));
-            window.location.href = 'agendamentos.html';
+            window.location.href = 'appointments.html';
         } else {
             alert('E-mail ou senha incorretos!');
         }

@@ -1,4 +1,4 @@
-// Alternar entre o Login e o Registro
+// Alternar entre Login e Registro
 document.addEventListener('DOMContentLoaded', () => {
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');

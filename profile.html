@@ -3,34 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Conta | Barbearia FB Cort's</title>
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/calendario.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>MINHA CONTA | BARBEARIA FB CORT'S</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
 </head>
 <body>
-    <header class="profile-page-header">
-        <nav class="profile-header-nav">
-            <!-- inserir logo da barbearia -->
-                <h1>BARBEARIA FB CORT'S</h1>
-                <button class="profile-nav-appointment-button">
-                    <a href="agendamentos.html" id="appointmentLink">
-                        <span class="fa fa-calendar"></span>
-                        <span>Agendamentos</span>
-                    </a>
-                </button>
-                <button class="profile-nav-logout-button">
-                    <a href="#" id="logoutLink">
-                        <span class="fa fa-sign-out"></span>
-                        <span>Sair</span>
-                    </a> <!-- logout -->
-                </button>
+    <header>
+        <nav>
+            <div class="logo">BARBEARIA FB CORT'S</div>
+            <ul class="nav-links">
+                <li><a href="appointments.html">Agendamentos</a></li>
+                <li><a href="#" class="active">Perfil</a></li>
+                <li><a href="#" id="logoutLink">Sair</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="profile-page-container">
-        <div class="profile-content-section">
+    <main class="container">
+        <div class="profile-section">
             <h2>Meu Perfil</h2>
             
             <form id="profileForm">
@@ -62,7 +53,6 @@
         </div>
     </main>
 
-    <script src="scripts/calendario.js"></script>
     <script src="js/profile.js"></script>
     <script src="js/auth.js"></script>
 </body>
