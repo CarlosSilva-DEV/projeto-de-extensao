@@ -1,0 +1,180 @@
+header {
+    background-color: #FF4B2B;
+    color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #f6f5f7;
+    font-weight: bold;
+}
+
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.calendar-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.month-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.month-navigation button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #FF4B2B;
+    padding: 0 1rem;
+}
+
+.month-navigation h3 {
+    margin: 0 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.day-header {
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem;
+    background: #f6f5f7;
+    border-radius: 5px;
+}
+
+.day-cell {
+    border: 1px solid #eee;
+    min-height: 100px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.day-cell:hover {
+    background: #f6f5f7;
+}
+
+.day-cell.inactive {
+    color: #ccc;
+    background: #f9f9f9;
+    cursor: default;
+}
+
+.day-cell.selected {
+    background: #FF4B2B;
+    color: white;
+}
+
+.day-number {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.time-slots-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.time-slot {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.time-slot.available {
+    background: #4CAF50;
+    color: white;
+}
+
+.time-slot.booked {
+    background: #F44336;
+    color: white;
+    cursor: not-allowed;
+}
+
+.time-slot.selected {
+    background: #FFC107;
+    color: black;
+    font-weight: bold;
+}
+
+#confirmAppointment {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    background: #FF4B2B;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#confirmAppointment:hover {
+    background: #E03E2A;
+}
+
+#confirmAppointment:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}

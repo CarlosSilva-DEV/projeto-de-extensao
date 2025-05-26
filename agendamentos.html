@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamentos | Barbearia FB Cort's</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/calendario.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <header class="appointment-page-header">
+        <nav class="appointment-header-nav">
+            <div class="appointment-nav-content">
+                <!-- inserir logo da barbearia -->
+                <h1>Barbearia FB Cort's</h1>
+                <p>Bem vindo à página de agendamentos.</p>
+                <button class="appointment-nav-profile-button">
+                    <a href="perfil.html" id="profileLink">
+                        <span class="fa fa-user"></span>
+                        <span>Perfil</span>
+                    </a>
+                </button>
+                <button class="appointment-nav-logout-button">
+                    <a href="#" id="logoutLink">
+                        <span class="fa fa-sign-out"></span>
+                        <span>Sair</span>
+                        </a> <!-- logout -->
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="appointment-page-container">
+        <div class="appointment-container-calendar">
+            <div class="calendar-header">
+                <h2>Agende seu horário</h2>
+                <div class="month-navigation">
+                    <button id="prevMonth">&lt;</button>
+                    <h3 id="currentMonth">Janeiro 2023</h3>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+            </div>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- O calendário será gerado dinamicamente via JavaScript -->
+            </div>
+        </div>
+
+        <div class="time-slots-container" id="timeSlotsContainer">
+            <h3>Horários disponíveis para <span id="selectedDate"></span></h3>
+            <div class="time-slots" id="timeSlots">
+                <!-- Os horários serão gerados dinamicamente -->
+            </div>
+            <button id="confirmAppointment" disabled>Confirmar Agendamento</button>
+        </div>
+    </main>
+
+    <script src="js/calendario.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

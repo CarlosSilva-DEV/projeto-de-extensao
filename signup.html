@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro | Barbearia FB Cort's</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+    <header class="sign-up-page-header">
+        <div class="sign-up-page-header-text">
+            <!-- inserir logo da barbearia -->
+            <h1>BARBEARIA FB CORT'S</h1>
+        </div>
+    </header>
     <div class="sign-up-page-container" id="sign-up-page-container">
         <div class="sign-up-form-container">
             <form id="registerForm">
@@ -16,11 +25,17 @@
                 <button type="submit">Cadastrar</button>
             </form>
         </div>
-        <span class="login-page-home-span">
-            <button class="login-page-home-button">
-                <a href="index.html">Voltar a página inicial</a>
+        <span class="sign-up-page-home-span">
+            <button class="sign-up-page-home-button">
+                <a href="index.html">
+                    <span class="fa fa-home">
+                    </span>
+                    <span>Voltar a página inicial</span>
+                </a>
             </button>
         </span>
     </div>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
